@@ -1,14 +1,37 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+
+    <Header></Header>
+    
+    <PollingImg></PollingImg>
+
+    <el-row class="content">
+      <router-view></router-view>
+      <Right></Right>
+    </el-row>
+    
+    <Footer></Footer>
+
   </div>
 </template>
 
 <script>
+
+import Header from '@/components/common/Header'
+import PollingImg from '@/components/common/PollingImg'
+import Footer from '@/components/common/Footer'
+import Right from '@/components/common/Right'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Header,
+    PollingImg,
+    Footer,
+    Right
+  }
 }
+
 </script>
 
 <style>
@@ -18,6 +41,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+}
+
+.content {
+  background-color: #5fa24f;
+  min-height: 800px;
 }
 </style>

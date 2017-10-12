@@ -1,33 +1,45 @@
 <template>
   <div id="app">
 
-    <Header></Header>
-    
-    <PollingImg></PollingImg>
-
-    <el-row class="content">
-      <router-view></router-view>
-      <Right></Right>
+    <el-row type="flex" justify="center" class="header">
+      <el-col :span="18">
+        <MyHeader></MyHeader>
+      </el-col>
     </el-row>
-    
-    <Footer></Footer>
+
+    <el-row type="flex" justify="center" class="pollingImg">
+      <el-col :span="22">
+        <PollingImg></PollingImg>
+      </el-col>
+    </el-row>
+
+    <el-row type="flex" justify="space-around" class="content">
+      <el-col :span="14">
+        <router-view></router-view>
+      </el-col>
+      <el-col :span="8">
+        <Right></Right>
+      </el-col>
+    </el-row>
+
+    <MyFooter></MyFooter>
 
   </div>
 </template>
 
 <script>
 
-import Header from '@/components/common/Header'
+import MyHeader from '@/components/common/Header'
 import PollingImg from '@/components/common/PollingImg'
-import Footer from '@/components/common/Footer'
+import MyFooter from '@/components/common/Footer'
 import Right from '@/components/common/Right'
 
 export default {
   name: 'app',
   components: {
-    Header,
+    MyHeader,
     PollingImg,
-    Footer,
+    MyFooter,
     Right
   }
 }
@@ -42,6 +54,17 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 20px;
+}
+
+.header {
+  height: 60px;
+  background-color: #2f5132;
+}
+
+.pollingImg {
+  height: 350px;
+  padding-top: 25px;
+  background-color: #25f214;
 }
 
 .content {

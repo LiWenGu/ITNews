@@ -1,8 +1,6 @@
 <template>
-    <div>
-      <el-col :span="10" class="right">
-        right
-      </el-col>
+    <div class="right">
+      我是友链
     </div>
 </template>
 
@@ -18,9 +16,10 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  height: 61px;
-  background-color: #2f5132;
+.right {
+  height: 100%;
+  widows: 100%;
+  background-color: #f132f5;
 }
 </style>
 

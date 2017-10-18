@@ -18,7 +18,7 @@
 
         <dependency>
             <groupId>com.liwenguang</groupId>
-            <artifactId>service</artifactId>
+            <artifactId>dao</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

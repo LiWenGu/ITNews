@@ -11,7 +11,6 @@
     <modules>
         <module>ITnews-api</module>
         <module>ITnews-dao</module>
-        <module>ITnews-service</module>
         <module>ITnews-spider</module>
         <module>ITnews-web-frontend</module>
     </modules>

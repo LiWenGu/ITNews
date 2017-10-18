@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
+
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 /**
@@ -33,7 +35,9 @@ public class JianShuController {
     public JianShuListBean getList(
             @RequestParam(value = "keyword") String keyword,
             @RequestParam(value = "pageNo") int pageNo,
-            @RequestParam(value = "orderBy") OrderByEnum orderBy) {
+            @RequestParam(value = "orderBy") OrderByEnum orderBy,
+            HttpServletResponse response) {
+        response.setHeader("Access-Control-Allow-Origin", "*");
         return jianShuService.getList(keyword, "note", pageNo, orderBy.getName());
     }
 }

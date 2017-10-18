@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>ITnews-api</module>
+        <module>ITnews-service</module>
         <module>ITnews-dao</module>
         <module>ITnews-spider</module>
         <module>ITnews-web-frontend</module>

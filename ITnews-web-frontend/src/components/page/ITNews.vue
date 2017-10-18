@@ -28,13 +28,13 @@
       </el-col>
       <el-col :span="20">
         <ul>
-          <li v-for="i in 20" :key="i">
+          <li v-for="i in listData.entries" :key="1">
             <div>
               <div>
-                标题
+                {{ i.id }}
               </div>
               <div>
-                简介
+                {{ i.title }}
               </div>
             </div>
           </li>
@@ -45,6 +45,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'itnews',
   methods: {
@@ -53,6 +55,22 @@ export default {
     },
     handleClose (key, keyPath) {
       console.log(key, keyPath)
+    }
+  },
+  created(){
+      axios.get('http://localhost:8081/api/jianshu/list.json?keyword=java&pageNo=1&orderBy=DEFAULT')
+      .then(response=>{
+         console.log(response);
+         this.listData=response.data;
+      })
+      .catch(error=>{
+          console.log(error);
+          alert('网络错误，不能访问');
+      })
+  },
+  data () {
+    return {
+      listData: {}
     }
   }
 }

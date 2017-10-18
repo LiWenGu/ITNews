@@ -10,18 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.liwenguang</groupId>
-    <artifactId>api</artifactId>
+    <artifactId>service</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.liwenguang</groupId>
-            <artifactId>service</artifactId>
+            <artifactId>dao</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
@@ -36,6 +32,11 @@
             <version>2.2.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.39</version>
+        </dependency>
     </dependencies>
 
     <build>

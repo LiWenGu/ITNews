@@ -8,6 +8,16 @@
 
 ---
 
+开发指导：
+#### 1. 前端：在 ITnews-web-frontend 子项目下进行开发
+#### 2. 后端分两种，一种原生从数据库取，另一种是爬到数据存取数据库：
+##### 2.1 原生
+在 ITnews-api、ITnews-service、ITnews-dao 子项目下进行开发接口
+##### 2.2 爬虫
+在 ITnews-spider 子项目开发，结合 ITnews-service 存储到对应数据库，以提供给 ITnews-api 抽取并转换为方便的接口供前端调用
+
+---
+
 目的1：每天定时爬简书技术类的文章，分类后存储到数据库中，最后网站展示出来。  
 1：整合springboot+mybatis+webmagic  
 2：跑通爬数据-存数据-取数据流程  

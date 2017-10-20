@@ -1,6 +1,11 @@
+
+---
+
 ##### 项目介绍
 
 使用爬虫爬取关于IT的各种文章并持久化到数据库，接着从数据库里取出，并展示。方便知识的集中获取
+
+---
 
 ##### 项目技术点
 
@@ -12,14 +17,18 @@
 配置管理：zookeeper（将所有账号密码放在zk上）
 数据库：MySQL
 
+---
+
 ##### 开发指导
 
 前端：在 ITnews-web-frontend 子项目下进行开发
 后端分两种，一种原生从数据库取，另一种是爬到数据存取数据库
->原生
-在 ITnews-api、ITnews-service、ITnews-dao 子项目下进行开发接口
->爬虫
+>原生：  
+在 ITnews-api、ITnews-service、ITnews-dao 子项目下进行开发接口  
+>爬虫：  
 在 ITnews-spider 子项目开发，结合 ITnews-service 存储到对应数据库，以提供给 ITnews-api 抽取并转换为方便的接口供前端调用
+
+---
 
 ##### 当前进度
 
